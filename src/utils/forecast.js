@@ -12,7 +12,7 @@ request({url,json:true},(error,{body})=>{
                 callback('Unable to find geoCode!',undefined);
             }
             else{
-                callback(undefined, 'It is current '+body.main.temp_max+' degress Out!');
+                callback(undefined, 'It is current '+body.main.temp_max+' degress Out! And there is '+body.weather[0].description +' ');
             }
 })
 }
