@@ -6,6 +6,7 @@ const foreCast=require('./utils/forecast');
 
 
 const app=express();
+const port=process.env.PORT || 3000
 
 // setting paths for express config
 const publicDirectryPath=path.join(__dirname,'../public');
@@ -88,6 +89,6 @@ app.get('*',(req,res)=>{
         errrorMsg:'Page Not Found!'
     });
 })
-app.listen(3000,()=>{
-    console.log('Server Started on Port 3000!');
+app.listen(port,()=>{
+    console.log('Server Started on Port '+port+'');
 })

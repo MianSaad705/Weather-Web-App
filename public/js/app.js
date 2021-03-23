@@ -7,7 +7,7 @@ addressForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     message1.textContent='Loading...!'
     const addressValue=address.value;
-    fetch('http://localhost:3000/weather?address='+ addressValue +'').then((response)=>{
+    fetch('/weather?address='+ addressValue +'').then((response)=>{
 response.json().then((data)=>{
     if(data.error){
         message1.textContent=data.error;
